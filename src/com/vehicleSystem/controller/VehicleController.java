@@ -1,9 +1,7 @@
 package com.vehicleSystem.controller;
 
-import com.vehicleSystem.dao.DatabaseOperations;
 import com.vehicleSystem.models.Vehicle;
-import com.vehicleSystem.models.VehicleType;
-import org.springframework.context.annotation.Scope;
+
 import org.springframework.stereotype.Component;
 
 import java.util.List;
@@ -12,11 +10,11 @@ import java.util.List;
 public interface VehicleController {
 
 
-    public boolean add(Vehicle vehicle);
+    boolean add(Vehicle vehicle);
 
-    public Vehicle getVehicleById(int id);
+    Vehicle getVehicleById(int id);
 
-    public List<Vehicle> getAllVehicles();
+    List<Vehicle> getAllVehicles();
 
     public int update(Vehicle vehicle);
 
