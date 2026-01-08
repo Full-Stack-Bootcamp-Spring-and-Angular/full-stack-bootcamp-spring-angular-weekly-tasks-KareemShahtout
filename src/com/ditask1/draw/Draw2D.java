@@ -1,4 +1,4 @@
-package com.DITask1.Draw;
+package com.ditask1.draw;
 
 public class Draw2D implements Draw{
     @Override

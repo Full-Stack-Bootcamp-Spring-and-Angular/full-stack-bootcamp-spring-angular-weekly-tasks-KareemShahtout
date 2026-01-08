@@ -1,7 +1,7 @@
-package com.DITask1;
+package com.ditask1;
 
-import com.DITask1.Shape.Circle;
-import com.DITask1.Shape.Square;
+import com.ditask1.shape.Circle;
+import com.ditask1.shape.Square;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 

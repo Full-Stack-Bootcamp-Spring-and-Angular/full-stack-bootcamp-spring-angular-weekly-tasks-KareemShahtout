@@ -1,6 +1,6 @@
-package com.DITask1.Shape;
+package com.ditask1.shape;
 
-import com.DITask1.Draw.Draw;
+import com.ditask1.draw.Draw;
 
 public class Circle extends Shape {
 

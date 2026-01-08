@@ -1,4 +1,4 @@
-package com.DITask2;
+package com.ditask2;
 
 public class DatabaseOperations {
     private String url;
