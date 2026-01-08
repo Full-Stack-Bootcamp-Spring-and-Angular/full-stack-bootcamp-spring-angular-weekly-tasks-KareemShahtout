@@ -16,8 +16,8 @@ public interface VehicleController {
 
     List<Vehicle> getAllVehicles();
 
-    public int update(Vehicle vehicle);
+    int update(Vehicle vehicle);
 
-    public int remove(int id);
+    int remove(int id);
 
 }
