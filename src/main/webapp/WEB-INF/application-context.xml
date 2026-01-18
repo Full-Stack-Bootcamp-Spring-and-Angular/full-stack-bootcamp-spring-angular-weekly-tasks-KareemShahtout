@@ -25,7 +25,6 @@
 	<mvc:annotation-driven/>
 
 	<!-- this line to config reading css,images and javascript files -->
-	<mvc:resources mapping="/resources/**" location="/resources/"/>
 
 </beans>
 

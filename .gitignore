@@ -44,6 +44,7 @@ bin/
 /.nb-gradle/
 
 ### VS Code ###
-.vscode/
 
 ### Mac OS ###
+config.bat
+node_modules
