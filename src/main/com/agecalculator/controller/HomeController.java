@@ -3,8 +3,8 @@ package main.com.agecalculator.controller;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 
-import javax.servlet.http.HttpServletRequest;
 import java.time.LocalDate;
 import java.time.Period;
 
@@ -17,12 +17,12 @@ public class HomeController {
     }
 
     @RequestMapping("/agePage")
-    public String showAgePage(HttpServletRequest request, Model model) {
-        int year = Integer.parseInt(request.getParameter("year"));
-        int day = Integer.parseInt(request.getParameter("day"));
-        int month = Integer.parseInt(request.getParameter("month"));
+    public String showAgePage(@RequestParam("year") String year, @RequestParam("month") String month, @RequestParam("day") String day, Model model) {
 
-        LocalDate birthDate = LocalDate.of(year, month, day);
+        LocalDate birthDate = LocalDate.of(Integer.parseInt(year),
+                                           Integer.parseInt(month),
+                                           Integer.parseInt(day));
+
         LocalDate currentDate = LocalDate.now();
 
         Period age = Period.between(birthDate, currentDate);
