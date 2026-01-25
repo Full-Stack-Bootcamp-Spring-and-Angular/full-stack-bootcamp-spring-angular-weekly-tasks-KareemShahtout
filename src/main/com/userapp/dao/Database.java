@@ -13,12 +13,11 @@ public class Database {
     private final String url = "jdbc:mysql://localhost:3306/user_db";
     private final String userName = "root";
     private final String password = "k_1234567";
+
     private Connection connection;
 
-    // Database connection and methods would go here
     @PostConstruct
     public void init() {
-        // Initialize database connection
         try {
             Class.forName("com.mysql.cj.jdbc.Driver");
             connection = DriverManager.getConnection(url, userName, password);
@@ -46,7 +45,7 @@ public class Database {
             statement.setString(3, userData.getEmail());
             statement.setString(4, userData.getCity());
             if (userData.getDateOfBirth() != null) {
-                statement.setDate(5, new java.sql.Date(userData.getDateOfBirth().getDate()));
+                statement.setDate(5, Date.valueOf(userData.getDateOfBirth()));
             } else {
                 statement.setNull(5, Types.DATE);
 
